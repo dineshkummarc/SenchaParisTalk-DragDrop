@@ -17,6 +17,14 @@ Ext.application({
                     xtype : 'highlight'
                 }, {
                     xtype : 'proxy'
+                },{
+                    style : 'padding:20px',
+                    styleHtmlContent : true,
+                    loader : {
+                        renderer : 'html',
+                        url      : 'more.html',
+                        autoLoad : true
+                    }
                 }]
             }
         });
