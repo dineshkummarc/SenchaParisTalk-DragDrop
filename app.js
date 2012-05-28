@@ -10,15 +10,13 @@ Ext.application({
                 items : [{
                     xtype : 'gridgrid'
                 },{
-                    xtype : 'treetree'
-                },{
                     xtype : 'gridform'
                 }, {
                     xtype : 'dvdv'
                 }, {
-                    xtype : 'dvdvhighlight'
+                    xtype : 'highlight'
                 }, {
-                    xtype : 'dvdvproxy'
+                    xtype : 'proxy'
                 }]
             }
         });

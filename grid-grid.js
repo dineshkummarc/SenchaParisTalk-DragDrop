@@ -39,9 +39,10 @@ Ext.define('SP.dd.GridGrid', {
             multiSelect: true,
             viewConfig: {
                 plugins: {
-                    ptype: 'gridviewdragdrop' /*,
-                    dragGroup: 'firstGridDDGroup',
-                    dropGroup: 'secondGridDDGroup'*/
+                    ptype: 'gridviewdragdrop'
+                    //,enableDrop : false
+                    //,dragGroup: 'firstGridDDGroup'
+                    //,dropGroup: 'secondGridDDGroup'
                 }
             },
             store      : firstGridStore,
@@ -58,9 +59,10 @@ Ext.define('SP.dd.GridGrid', {
         var secondGrid = Ext.create('Ext.grid.Panel', {
             viewConfig: {
                 plugins: {
-                    ptype: 'gridviewdragdrop'/*,
-                    dragGroup: 'secondGridDDGroup',
-                    dropGroup: 'firstGridDDGroup'*/
+                    ptype: 'gridviewdragdrop'
+                    //,enableDrag : false
+                    //,dragGroup: 'secondGridDDGroup'
+                    //,dropGroup: 'firstGridDDGroup'
                 }
             },
             store      : secondGridStore,
@@ -69,6 +71,7 @@ Ext.define('SP.dd.GridGrid', {
         });
         
         var talk = Ext.create('Ext.Component', {
+            style : 'padding:20px',
             styleHtmlContent : true,
             loader : {
                 renderer : 'html',

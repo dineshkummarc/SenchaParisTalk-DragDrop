@@ -40,7 +40,7 @@ Ext.define('SP.dd.GridForm', {
             viewConfig: {
                 plugins: {
                     ptype      : 'gridviewdragdrop',
-                    ddGroup    : 'gridform',
+                    dragGroup  : 'gridform',
                     enableDrop : false
                 }
             },
@@ -52,9 +52,12 @@ Ext.define('SP.dd.GridForm', {
         
         // Setup the form panel
         var formPanel = Ext.create('Ext.form.Panel', {
-            //bodyStyle  : 'padding: 10px; background-color: #DFE8F6',
+            bodyStyle  : 'padding: 10px; background-color: #DFE8F6',
             labelWidth : 100,
-            defaultType : 'textfield',
+            defaults : {
+                xtype  : 'textfield',
+                anchor : '100%'
+            },
             items : [{
                 fieldLabel : 'Record Name',
                 name       : 'name'
@@ -67,9 +70,10 @@ Ext.define('SP.dd.GridForm', {
             }]
         });
         
-        formPanel.on('afterrender', this.setupDragDrop, this);
+        formPanel.on('render', this.setupDragDrop, this);
     
         var talk = Ext.create('Ext.Component', {
+            style : 'padding:20px',
             styleHtmlContent : true,
             loader : {
                 renderer : 'html',
