@@ -8,7 +8,9 @@ Ext.define('TouchDD.view.DraggableImage', {
             direction: 'both',
             constraint : 'container'
         },
-        width : 50
+        // hard coded
+        width  : 50,
+        height : 50
     },
     initialize: function() {
         this.callParent();
@@ -21,7 +23,7 @@ Ext.define('TouchDD.view.DraggableImage', {
     },
 
     onDragStart: function() {
-        
+        this.element.addCls('dragging');
     },
 
     onDrag: function() {
@@ -29,6 +31,6 @@ Ext.define('TouchDD.view.DraggableImage', {
     },
 
     onDragEnd: function() {
-        
+        this.element.removeCls('dragging');
     }
 });
