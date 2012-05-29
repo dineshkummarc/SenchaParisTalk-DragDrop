@@ -21,3 +21,24 @@ div.selected {
 div.over {
     background-color: #ddd;
 }
+
+div.source {
+    width : 100px;
+    height : 100px;
+    background-color : #f55;
+    margin : 20px;
+}
+
+div.target {
+    position : absolute;
+    bottom : 0;
+    right : 0;
+    width : 150px;
+    height : 150px;
+    background-color : #5f5;
+    margin : 20px;
+}
+
+ul.info {
+    font-size : 2em;
+}

@@ -17,12 +17,24 @@ Ext.application({
                     xtype : 'highlight'
                 }, {
                     xtype : 'proxy'
+                }, {
+                    xtype : 'dom'
                 },{
+                    title : 'More',
                     style : 'padding:20px',
                     styleHtmlContent : true,
                     loader : {
                         renderer : 'html',
                         url      : 'more.html',
+                        autoLoad : true
+                    }
+                },{
+                    title : 'Merci',
+                    style : 'padding:20px',
+                    styleHtmlContent : true,
+                    loader : {
+                        renderer : 'html',
+                        url      : 'info.html',
                         autoLoad : true
                     }
                 }]
